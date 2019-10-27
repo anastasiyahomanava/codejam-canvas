@@ -141,19 +141,19 @@ a {
 }
 
 .paint-tool::before {
-  content: url(./assets/images/Sheets/fill-drip.png);
+  content: url(../assets/images/Sheets/fill-drip.png);
 }
 
 .color-tool::before {
-  content: url(./assets/images/Sheets/icon-upload.png);
+  content: url(../assets/images/Sheets/icon-upload.png);
 }
 
 .move-tool::before {
-  content: url(./assets/images/Sheets/icon-move.png);
+  content: url(../assets/images/Sheets/icon-move.png);
 }
 
 .transform-tool::before {
-  content: url(./assets/images/Sheets/icon-arrows.png);
+  content: url(../assets/images/Sheets/icon-arrows.png);
 }
 
 .current-color::before {
@@ -204,4 +204,20 @@ a {
 
 main ::before {
   margin-right: 30px;
+}
+
+.canvas__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: grey;
+}
+
+.canvas {
+  width: 512px;
+  height: 512px;
+  background-color: #ffffff;
+  border: 1px solid black;
 }
