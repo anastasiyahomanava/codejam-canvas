@@ -213,15 +213,12 @@ main ::before {
   align-items: center;
   width: 100vw;
   height: 100vh;
-  background-color: grey;
 }
 
 .canvas {
   width: 512px;
   height: 512px;
   image-rendering: pixelated;
-  background-color: #ffffff;
-  border: 1px solid black;
 }
 
 .switcher {
