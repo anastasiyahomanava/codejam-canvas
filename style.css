@@ -5,10 +5,19 @@
 
 body {
   font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 24px;
+  color: rgba(0, 0, 0, 0.541327);
 }
 
 .header {
   height: 48px;
+  width: 100vw;
   -webkit-box-shadow: 0px 7px 8px 1px rgba(0, 0, 0, 0.31);
   -moz-box-shadow: 0px 7px 8px 1px rgba(0, 0, 0, 0.31);
   box-shadow: 0px 7px 8px 1px rgba(0, 0, 0, 0.31);
@@ -94,4 +103,105 @@ body {
 
 .dots-menu__line::after {
   transform: translateY(7px);
+}
+
+.tools,
+.colors {
+  position: fixed;
+  left: 3%;
+  width: 228px;
+  height: 246px;
+  -webkit-box-shadow: 0px 10px 9px 0px rgba(0, 0, 0, 0.38);
+  -moz-box-shadow: 0px 10px 9px 0px rgba(0, 0, 0, 0.38);
+  box-shadow: 0px 10px 9px 0px rgba(0, 0, 0, 0.38);
+  border: 1px solid rgba(114, 113, 113, 0.38);
+  margin-left: 29px;
+  background-color: #ffffff;
+}
+
+.tools {
+  top: 10%;
+}
+
+.colors {
+  top: 40%;
+}
+
+.tools-list,
+.colors-list {
+  list-style-type: none;
+  padding: 30px;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.tools-list li,
+.colors-list li {
+  height: 48px;
+}
+
+.paint-tool::before {
+  content: url(./assets/images/Sheets/fill-drip.png);
+}
+
+.color-tool::before {
+  content: url(./assets/images/Sheets/icon-upload.png);
+}
+
+.move-tool::before {
+  content: url(./assets/images/Sheets/icon-move.png);
+}
+
+.transform-tool::before {
+  content: url(./assets/images/Sheets/icon-arrows.png);
+}
+
+.current-color::before {
+  content: '';
+  display: block;
+  border: 1px solid black;
+  border-radius: 50%;
+  width: 23px;
+  height: 23px;
+  background-color: #C4C4C4;
+}
+
+.prev-color::before {
+  content: '';
+  display: block;
+  border: 1px solid black;
+  border-radius: 50%;
+  width: 23px;
+  height: 23px;
+  background-color: #41F795;
+}
+
+.red-color::before {
+  content: '';
+  display: block;
+  border: 1px solid black;
+  border-radius: 50%;
+  width: 23px;
+  height: 23px;
+  background-color: #F74141;
+}
+
+.blue-color::before {
+  content: '';
+  display: block;
+  border: 1px solid black;
+  border-radius: 50%;
+  width: 23px;
+  height: 23px;
+  background-color: #41B6F7;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+}
+
+main ::before {
+  margin-right: 30px;
 }
