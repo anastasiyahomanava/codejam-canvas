@@ -219,6 +219,7 @@ main ::before {
 .canvas {
   width: 512px;
   height: 512px;
+  image-rendering: pixelated;
   background-color: #ffffff;
   border: 1px solid black;
 }
