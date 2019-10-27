@@ -2,18 +2,10 @@ window.addEventListener('load', function () {
   document.querySelector('.yellow-pic').addEventListener('change', drawYellowPicture);
   document.querySelector('.red-pic').addEventListener('change', drawRedPicture);
   document.querySelector('.rs-logo').addEventListener('change', drawRSS);
-  document.querySelector('rs-logo').dispatchEvent(new Event('change'));
 });
 
 let canvas = document.querySelector('canvas');
 let context = canvas.getContext('2d');
-
-const hexPixels = [
-  ["00BCD4", "FFEB3B", "FFEB3B", "00BCD4"],
-  ["FFEB3B", "FFC107", "FFC107", "FFEB3B"],
-  ["FFEB3B", "FFC107", "FFC107", "FFEB3B"],
-  ["00BCD4", "FFEB3B", "FFEB3B", "00BCD4"]
-]
 
 const concat = (xs, ys) => xs.concat(ys);
 
@@ -33,10 +25,10 @@ function drawYellowPicture() {
 }
 
 function drawRedPicture() {
-  const flattenedRGBA = hexPixels.reduce(concat).map(hexToRGBA).reduce(concat);
-  canvas.width = 4;
-  canvas.height = 4;
-  const imgData = new ImageData(Uint8ClampedArray.from(flattenedRGBA), 4, 4);
+  const flattenedRGBA = rgbaPixels.reduce(concat).reduce(concat);
+  canvas.width = 32;
+  canvas.height = 32;
+  const imgData = new ImageData(Uint8ClampedArray.from(flattenedRGBA), 32, 32);
   context.putImageData(imgData, 0, 0);
 }
 
