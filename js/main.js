@@ -4,8 +4,8 @@ window.addEventListener('load', function () {
   document.querySelector('.rs-logo').addEventListener('change', drawRSS);
 });
 
-let canvas = document.querySelector('canvas');
-let context = canvas.getContext('2d');
+const canvas = document.querySelector('canvas');
+const context = canvas.getContext('2d');
 
 const concat = (xs, ys) => xs.concat(ys);
 
@@ -33,7 +33,7 @@ function drawRedPicture() {
 }
 
 function drawRSS() {
-  let img = new Image();
+  const img = new Image();
   img.src = './data/image.png';
   img.onload = function () {
     canvas.width = 256;
